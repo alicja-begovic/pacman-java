@@ -10,5 +10,9 @@ public class App {
 
         JFrame frame = new JFrame("Pac Man");
         frame.setVisible(true);
+        frame.setSize(boardWidth, boardHeight);
+        frame.setLocationRelativeTo(null); //tu ustawiam że okienko wyświetla się na środku ekranu
+        frame.setResizable(false); // tutaj użytkownik nie może zmieniać wielkości okienka
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //kiedy użytkownik przyciśnie x na okienki
     }
 }
