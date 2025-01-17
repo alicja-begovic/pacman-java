@@ -11,16 +11,15 @@ public class App {
         JFrame frame = new JFrame("Pac Man");
         // frame.setVisible(true);
         frame.setSize(boardWidth, boardHeight);
-        frame.setLocationRelativeTo(null); //tu ustawiam że okienko wyświetla się na środku ekranu
-        frame.setResizable(false); // tutaj użytkownik nie może zmieniać wielkości okienka
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //kiedy użytkownik przyciśnie x na okienku
+        frame.setLocationRelativeTo(null);
+        frame.setResizable(false);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        pacman pacmanGame = new pacman();
+        PacMan pacmanGame = new PacMan();
         frame.add(pacmanGame);
         frame.pack();
+        pacmanGame.requestFocus();
         frame.setVisible(true);
+
     }
 }
-
-
-//tutaj ogólie nie chcemy mieć widocznego okna, dopóki wszystkie komponenty się w nim nie znajdują
